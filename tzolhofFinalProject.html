@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2018-09-02T19:35:53.353950799"/>
+	<meta name="created" content="2018-09-01T19:57:07.764190350">
+	<meta name="changed" content="2018-09-02T19:32:17.573985753">
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+		pre.cjk { font-family: "Nimbus Mono L", monospace }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<p style="margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><b>About</b></font></font></font></p>
+<p style="margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">This
+is the Final Project for the Practical Machine Learning Coursera's
+Course.</font></font></font></p>
+<p style="margin-bottom: 0.17in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">Using
+devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now
+possible to collect a large amount of data about personal activity
+relatively inexpensively. These type of devices are part of the
+quantified self movement – a group of enthusiasts who take
+measurements about themselves regularly to improve their health, to
+find patterns in their behavior, or because they are tech geeks. One
+thing that people regularly do is quantify how much of a particular
+activity they do, but they rarely quantify how well they do it.</font></font></font></p>
+<p style="margin-bottom: 0.17in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">The
+data for this project come from this source:
+</span></span></span></font></font></font></span><a href="http://groupware.les.inf.puc-rio.br/har"><span style="font-variant: normal"><font color="#0366d6"><span style="text-decoration: none"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="background: transparent">http://groupware.les.inf.puc-rio.br/har</span></span></span></span></font></font></span></font></span></a><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">.
+Six participants were asked to perform barbell lifts correctly and
+incorrectly in 5 different ways. The goal of this Final Project is to
+predict the manner in which they did the exercise, using data from
+accelerometers on their belt, forearm, arm, and dumbell.</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><b>Data</b></font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+training data for this project are available here:</font></font></font></p>
+<p><a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" target="_blank"><u>https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv</u></a></p>
+<p style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+test data are available here:</font></font></font></p>
+<p><a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv" target="_blank">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv</a></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><b>Exploring
+Data</b></font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+original files were read as follows:</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">original_training
+&lt;- read.csv(&quot;pml-training.csv&quot;)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">original_testing
+&lt;- read.csv(&quot;pml-testing.csv&quot;)</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+dimensions of both data sets were obtained with the dim command:</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">training
+– 19,622 rows x 160 columns</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">testing
+– 20 rows x 160 columns</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Then,
+using</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">the
+summary command, it was possible to see that many columns had blank</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">or
+NA values, as shown in the extract below:</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<pre class="western" style="orphans: 2; widows: 2">
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">kurtosis_roll_dumbbell kurtosis_picth_dumbbell kurtosis_yaw_dumbbell</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><span style="background: #ffff00">          </span><font face="Ubuntu Mono"><font size="2" style="font-size: 10pt"><span style="background: #ffff00">:19216                 :19216                  :19216 </span></font></font>       </span>
+<span style="display: inline-block; border: none; padding: 0in">   <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">#DIV/0!:    5          -0.5464:    2           #DIV/0!:  406        </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">   <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">-0.2583:    2          -0.9334:    2                                </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">   <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">-0.3705:    2          -2.0833:    2                                </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">   <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">-0.5855:    2          -2.0851:    2                                </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">   <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">-2.0851:    2          -2.0889:    2                    </font></font></span></pre><p style="margin-bottom: 0in; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Because
+of that, the training data were read again, but now ignoring all
+columns with more than 90% of missing values:</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">training_to_reduce
+&lt;- read.csv(&quot;pml-training.csv&quot;, na.strings = c(&quot;&quot;,
+NA))</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">cols_is_na
+&lt;- ((colSums(is.na(training_to_reduce)) &gt;
+0.1*nrow(training_to_reduce)) == TRUE)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">cols_original
+&lt;- names(training_to_reduce)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">cols_to_delete
+&lt;- cols_original[cols_is_na]</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">training_final
+&lt;- training_to_reduce[, -which(names(training_to_reduce) %in%
+cols_to_delete)] </font></font></font>
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">With
+that, the number of columns was reduced from 160 to 60. This allowed
+a closer exploration of the remaining columns, and the realization
+that the first 7 columns were also not relevant to the analysis since
+they contained information about indexes, names of the participants,
+time stamps of the measurements and a window variable that also had
+more than 90% of repeated values. Hence, those columns were deleted
+from the data set:</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">new_cols_to_delete
+&lt;- names(training_to_reduce[1:7])</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">training_final
+&lt;- training_final[, -which(names(training_final) %in%
+new_cols_to_delete)] </font></font></font>
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">With
+that, the number of columns in the training data set was reduced to
+53.</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+same steps needed to be applied to the original testing set. The last
+column was also excluded since it only had indexes related to the
+Coursera’s quiz:</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">testing
+&lt;- original_testing[, -which(names(original_testing) %in%
+cols_to_delete)] </font></font></font>
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">testing
+&lt;- testing[, -which(names(testing) %in% new_cols_to_delete)]</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">testing
+&lt;- testing[-53]</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><b>Creating
+Training and Validation Sets</b></font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">With
+the data ready, the training and validation sets were created with
+the use of the caret package, and the proportion of 75% - 25%:</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">library(caret)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">inTrain
+&lt;- createDataPartition(y=training_final$classe, p=0.75, list =
+FALSE)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">training
+&lt;- training_final[inTrain,]</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">validation
+&lt;- training_final[-inTrain,]</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">The
+final dimensions were:</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">training
+– 14,718</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">rows
+x 53</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">columns</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">validation
+– 4,904</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">rows
+x 53</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">columns</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">testing
+- 20</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">rows
+x 52</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">columns</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><b><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">Trying
+Different Models</span></span></font></font></font></span></b></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">1)</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#24292e"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">rpart
+- Recursive Partitioning And Regression Trees</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">set.seed(334)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">model1
+&lt;- train(classe ~ ., data=training, method=&quot;rpart&quot;)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">pr_model1
+&lt;- predict(model1, validation)</font></font></font></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt">confusionMatrix(pr_model1,
+validation$classe)</font></font></font></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">By
+predicting the model on the validation data, and then plotting the
+corresponding confusion matrix, it is possible to see that the
+accuracy was only 0.4933, which shows that this model was not a good
+choice to fit the data:</span></span></span></font></font></font></span></p>
+<p style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<pre class="western" style="border: none; padding: 0in"><span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Confusion Matrix and Statistics</span></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in">          <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Reference</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Prediction    A    B    C    D    E</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">A 1268  409  401  372  127</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">B   18  311   27  133  119</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">C  106  229  427  299  242</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">D    0    0    0    0    0</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">E    3    0    0    0  413</font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Overall Statistics</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">                                          </span>
+<span style="display: inline-block; border: none; padding: 0in">               <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Accuracy : 0.4933          </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">                 <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">95% CI : (0.4792, 0.5074)</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">No Information Rate : 0.2845          </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">P-Value [Acc &gt; NIR] : &lt; 2.2e-16       </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">                                          </span>
+<span style="display: inline-block; border: none; padding: 0in"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">2) gbm - Gradient Boosting Machine</span></span></span></font></font></font></span></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">model2 &lt;- train(classe ~ ., data=training, method=&quot;gbm&quot;)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">pr_model2 &lt;- predict(model2, validation)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">confusionMatrix(pr_model2, validation$classe)</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><span style="font-variant: normal"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">In this case, after predicting on the validation data, and then plotting the corresponding confusion matrix, the accuracy was much better: 0.959:</span></span></span></font></font></font></span></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Confusion Matrix and Statistics</span></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in">          <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Reference</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Prediction    A    B    C    D    E</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">A 1367   40    0    0    0</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">B   19  875   24    1    7</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">C    5   32  821   28   10</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">D    3    1    6  770   14</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">E    1    1    4    5  870</font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Overall Statistics</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">                                          </span>
+<span style="display: inline-block; border: none; padding: 0in">               <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Accuracy : 0.959           </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">                 <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">95% CI : (0.9531, 0.9644)</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">No Information Rate : 0.2845          </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">P-Value [Acc &gt; NIR] : &lt; 2.2e-16</font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">3) lda - Linear Discriminant Analysis:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">model3 &lt;- train(classe ~ ., data=training, method=&quot;lda&quot;)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">pr_model3 &lt;- predict(model3, validation)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">confusionMatrix(pr_model3, validation$classe)</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">Here, according to the confusion matrix, the accuracy was 0.6982:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Confusion Matrix and Statistics</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">          </span>
+<span style="display: inline-block; border: none; padding: 0in">                <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Reference</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Prediction    A    B    C    D    E</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">A 1139  169   87   41   32</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">B   32  592   84   45  141</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">C  106  108  549   95   98</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">D  113   28  113  598   84</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">E    5   52   22   25  546</font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Overall Statistics</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">                                         </span>
+<span style="display: inline-block; border: none; padding: 0in">               <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Accuracy : 0.6982         </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">                 <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">95% CI : (0.6851, 0.711)</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">No Information Rate : 0.2845         </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">P-Value [Acc &gt; NIR] : &lt; 2.2e-16 </font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">4) rf - Random Forest:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">trControl &lt;- trainControl(number=5, method=&quot;cv&quot;)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">model4 &lt;- train(classe ~ ., data=training, method=&quot;rf&quot;, trControl=trControl)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">pr_model4 &lt;- predict(model4, validation)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">confusionMatrix(pr_model4, validation$classe)</span></font></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">In this fourth model, the accuracy on the validation data was 0.9929, the best observed so far:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Confusion Matrix and Statistics</span></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in">          <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Reference</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Prediction    A    B    C    D    E</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">A 1393    9    0    0    0</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">B    2  936    7    0    0</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">C    0    4  848   12    0</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">D    0    0    0  792    1</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">         <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">E    0    0    0    0  900</font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Overall Statistics</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in">                                         </span>
+<span style="display: inline-block; border: none; padding: 0in">               <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Accuracy : 0.9929         </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">                 <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">95% CI : (0.9901, 0.995)</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">No Information Rate : 0.2845         </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in">    <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">P-Value [Acc &gt; NIR] : &lt; 2.2e-16 </font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font color="#24292e"> </span></font>
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">For this reason, this was the model selected to predict the Classe variable on the testing set. Using the varImp(model4) command, it was possible to see the variable importance rank in the random forest model:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in">rf variable importance </span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">only 20 most important variables shown (out of 52)</span></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in">                     <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">Overall</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">roll_belt             100.00</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">yaw_belt               86.41</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">magnet_dumbbell_z      75.97</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">magnet_dumbbell_y      67.50</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">pitch_forearm          66.92</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">pitch_belt             65.62</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">magnet_dumbbell_x      56.05</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">roll_forearm           50.84</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">roll_dumbbell          48.72</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">accel_dumbbell_y       46.28</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">accel_belt_z           45.98</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">magnet_belt_y          44.90</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">magnet_belt_z          44.39</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">accel_dumbbell_z       41.42</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">roll_arm               37.98</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">accel_forearm_x        36.22</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">gyros_belt_z           32.34</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">accel_dumbbell_x       30.92</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">total_accel_dumbbell   29.83</span></font></font>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">yaw_dumbbell           29.66</span></font></font>
+
+
+<span style="display: inline-block; border: none; padding: 0in"><font color="#24292e"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b><span style="font-variant: normal">Predictions for the testing set</span></b></span></span></font></font></font></span>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">Those were the predictions obtained to the testing final, using the chosen model:</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"><font face="apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"><font size="3" style="font-size: 12pt"><font color="#24292e">predict(model4, testing)</span></font></font></font>
+
+<span style="display: inline-block; border: none; padding: 0in"> <font face="Ubuntu Mono"><font size="2" style="font-size: 10pt">[1] B A B A A E D B A A B C B A E E A B B B</font></font></span>
+<span style="display: inline-block; border: none; padding: 0in"><font size="2" style="font-size: 10pt"><font face="Ubuntu Mono">Levels: A B C D E</span></font></font></pre>
+</body>
+</html>
