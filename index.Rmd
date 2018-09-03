@@ -1,0 +1,133 @@
+---
+title: "Practical Machine Learning Course Project"
+author: "Tatiana Zolhof"
+date: "September 2, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+About
+
+This is the Final Project for the Practical Machine Learning Coursera's Course.
+Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. These type of devices are part of the quantified self movement – a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it.
+The data for this project come from this source: http://groupware.les.inf.puc-rio.br/har. Six participants were asked to perform barbell lifts correctly and incorrectly in 5 different ways. The goal of this Final Project is to predict the manner in which they did the exercise, using data from accelerometers on their belt, forearm, arm, and dumbell.
+
+Data
+
+The training data for this project are available here:
+https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
+
+The test data are available here:
+https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
+
+Exploring Data
+
+The original files were read as follows:
+
+```{r originalsets}
+original_training <- read.csv("pml-training.csv")
+original_testing <- read.csv("pml-testing.csv")
+```
+
+The dimensions of both data sets were obtained with the dim command:
+
+training – 19,622 rows x 160 columns
+
+testing – 20 rows x 160 columns
+
+Then, using the summary command, it was possible to see that many columns had blank or NA values.
+
+Because of that, the training data were read again, but now ignoring all columns with more than 90% of missing values:
+
+```{r deleting missing values}
+training_to_reduce <- read.csv("pml-training.csv", na.strings = c("", NA))
+cols_is_na <- ((colSums(is.na(training_to_reduce)) > 0.1*nrow(training_to_reduce)) == TRUE)
+cols_original <- names(training_to_reduce)
+cols_to_delete <- cols_original[cols_is_na]
+training_final <- training_to_reduce[, -which(names(training_to_reduce) %in% cols_to_delete)] 
+```
+
+With that, the number of columns was reduced from 160 to 60. This allowed a closer exploration of the remaining columns, and the realization that the first 7 columns were also not relevant to the analysis since they contained information about indexes, names of the participants, time stamps of the measurements and a window variable that also had more than 90% of repeated values. Hence, those columns were deleted from the data set:
+
+```{r deleting non relevant columns}
+new_cols_to_delete <- names(training_to_reduce[1:7])
+training_final <- training_final[, -which(names(training_final) %in% new_cols_to_delete)] 
+```
+
+With that, the number of columns in the training data set was reduced to 53.
+
+The same steps needed to be applied to the original testing set. The last column was also excluded since it only had indexes related to the Coursera’s quiz:
+
+```{r doing the same on the testing set}
+testing <- original_testing[, -which(names(original_testing) %in% cols_to_delete)] 
+testing <- testing[, -which(names(testing) %in% new_cols_to_delete)]
+testing <- testing[-53]
+```
+
+Creating Training and Validation Sets
+
+With the data ready, the training and validation sets were created with the use of the caret package, and the proportion of 75% - 25%:
+
+```{r creating sets}
+library(caret)
+inTrain <- createDataPartition(y=training_final$classe, p=0.75, list = FALSE)
+training <- training_final[inTrain,]
+validation <- training_final[-inTrain,]
+```
+
+The final dimensions were:
+
+```{r dim sets}
+dim(training)
+dim(validation)
+dim(testing)
+```
+Trying Different Models
+
+1) rpart - Recursive Partitioning And Regression Trees
+
+```{r rpart model}
+set.seed(334)
+model1 <- train(classe ~ ., data=training, method="rpart")
+pr_model1 <- predict(model1, validation)
+confusionMatrix(pr_model1, validation$classe)
+```
+
+By predicting the model on the validation data, and then plotting the corresponding confusion matrix, it is possible to see that the accuracy was approximately 0.50, which shows that this model was not a good choice to fit the data.
+
+2) lda - Linear Discriminant Analysis:
+
+```{r lda model}
+model2 <- train(classe ~ ., data=training, method="lda")
+pr_model2 <- predict(model2, validation)
+confusionMatrix(pr_model2, validation$classe)
+```
+
+Here, according to the confusion matrix, the accuracy was approximatey 0.70.
+
+3) rf - Random Forest:
+
+```{r rf model}
+trControl <- trainControl(number=5, method="cv")
+model3 <- train(classe ~ ., data=training, method="rf", trControl=trControl)
+pr_model3 <- predict(model3, validation)
+confusionMatrix(pr_model3, validation$classe)
+```
+
+In this third model, the accuracy on the validation data was approximately 0.99, the very best observed so far.
+
+For this reason, this was the model selected to predict the Classe variable on the testing set. Using the varImp command, it was possible to see the variable importance rank in the random forest model:
+
+```{r varImp}
+varImp(model3)
+```
+
+Predictions for the testing set
+
+Those were the predictions obtained to the testing set, using the chosen model:
+
+```{r predictions test set}
+predict(model3, testing)
+```
