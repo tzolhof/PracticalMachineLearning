@@ -12,4 +12,6 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 perform barbell lifts correctly and incorrectly in 5 different ways. The goal of this Final Project is to predict the manner in
 which they did the exercise, using data from accelerometers on their belt, forearm, arm, and dumbell. 
 
-Finished in September, 2018.
+By Tatiana Zolhof Panisset
+
+September, 2018.
